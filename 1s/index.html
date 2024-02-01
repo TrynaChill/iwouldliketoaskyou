@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-IN" dir="ltr">
+  <head>
+    <title>Do you wanna go out with me?</title>
+    <meta charset="utf-8">
+    <meta name="author" content="SidPro"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <meta name="description" content="Wanna make a Minecraft world with me? Send it to your friend or crush to ask to play."/>
+    <meta name="keywords" content="Wanna make a Minecraft world with me? Send it to your friend or crush to ask to play"/>
+    <link rel="stylesheet" href="./style.css">
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-3EWCZHDCG9');
+    </script>
+  </head>
+    <body>
+        <div class="wrapper">
+            <div id="ask" class="container">
+                <div >
+                    <h1 class = "header_text">Wanna make a Minecraft <br>world with me :D?</h1>
+                </div>
+                <div class="gif_container">
+                    <img src="images/question.png" alt="Cute animated illustration">
+                </div>
+                <div class = "buttons">
+                    <button class="btn" id = "yesButton" onclick="nextPage()">YES :D</button>
+                    <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">NO :(</button>
+                </div>
+            </div>
+            <div id="ans" class="container">
+                <div >
+                    <h1 class = "header_text">YAAAAY :D!!</h1>
+                </div>
+                <div class="gif_container">
+                    <img src="images/cheered.png" alt="Cute animated illustration" style="margin-bottom: 15vh;">
+                </div>
+                <div class="credits">
+                    <p>Creator: @javi_liras<br>Credits: Gabu Siddharth</p>
+                </div>
+            </div>
+        </div>
+    </body> 
+    <script>
+
+        var debounce = function(fn, t = 1000) {
+            let timer;
+            return function(...args) {
+                clearTimeout(timer);
+                timer = setTimeout(() => fn(...args), t);
+            }
+        };
+
+
+        function playAudio()
+        {
+            document.getElementById('novideo').play();
+        }
+
+        function nextPage() {
+            document.getElementById('ans').style.display = 'block';
+            document.getElementById('ask').style.display = 'none';
+        }
+
+        function moveButton() {
+            var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+            var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+
+            document.getElementById('noButton').style.left = `${x}px`;
+            document.getElementById('noButton').style.top = `${y}px`;
+        }
+
+    </script> 
+</html>

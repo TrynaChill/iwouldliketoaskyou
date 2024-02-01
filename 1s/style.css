@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+*{
+    color: white;
+    font-family: 'Noto Sans', sans-serif;;
+}
+body {
+    
+    height: 90vh;
+    background-image: url(images/background.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.wrapper{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(8px);
+}
+#ans {
+    display: none;
+}
+
+#ansvideo{
+    visibility: hidden;
+}
+
+#novideo{
+    visibility: hidden;
+}
+
+#noButton {
+    position: absolute;
+    margin-left: 150px;
+    transition: 0.5s;
+}
+
+#yesButton {
+    position: absolute;
+    margin-right: 150px;
+}
+
+.header_text {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 0px;
+}
+
+.text {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.btn {
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    background-color: #337121;
+    border-top: 4px solid #6BC349;
+    border-bottom: 4px solid #2A631C;
+    border-left: none;
+    border-right: none;
+    transition: 0.3s ease-in;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color:  #181915;
+    border-top: 4px solid #181915;
+    border-bottom: 4px solid #181915;
+}
+
+.gif_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qrimage{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 350px;
+  height: auto;
+}
+
+img
+{
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    height: 500px;
+    margin-bottom: 10vh;
+    margin-top: 6vh;
+}
+
+.credits{
+    text-align: center;
+    margin-top: 4vh;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .header_text{
+        color: black;
+        font-size: 40px;
+    }
+    .qrimage{
+        max-width: 50%;
+        padding-left: 25%;
+    }
+    .gif_container{
+        margin-left:0;
+        height: auto;
+        width: auto;
+    }
+  }
